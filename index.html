@@ -40,8 +40,9 @@ if (h==0) {h=12}
 // add a zero in front of numbers<10
 m=checkTime(m);
 s=checkTime(s);
-document.getElementById('date1').innerHTML=h+":"+m+":"+s+"     "+ap;
-document.getElementById('date2').innerHTML=dict[mo]+" "+d+", "+y;
+document.getElementById('date1').innerHTML=h+":"+m+":"+s;
+document.getElementById('date2').innerHTML=ap;
+document.getElementById('date3').innerHTML=dict[mo]+" "+d+", "+y;
 t=setTimeout('startTime()',500);
 }
 function checkTime(i)
@@ -57,11 +58,19 @@ return i;
 
 <style>
 body {background-color: white; text-align: center; font-family: 'Merriweather', serif; color: black}
-#block {height:35%}
+table {margin-left: auto; margin-right: auto}
+#social {text-align: left; position:fixed;  bottom:10;}
+#td1 {width: 20em}
+#td2 {width: 10em}
+#spacer {width: 1em}
+#block {height:30%}
+#block2 {height:8em}
+
 #text1 {font-size: 30pt}
 #text2 {font-size: 18pt}
-#date1 {font-size: 40pt}
-#date2 {font-size: 20pt}
+#date1 {font-size: 60pt; text-align: right}
+#date2 {font-size: 60pt; text-align: left}
+#date3 {font-size: 20pt}
 
 
 </style>
@@ -75,9 +84,20 @@ body {background-color: white; text-align: center; font-family: 'Merriweather', 
 <div id="text1"> We're busy procrastinating! </div>
 <br><br>
 <div id="text2"> The Procrastinator website will launch at: </div>
-<div id="date1"></div>
-<div id="date2"></div>
+<table>
+<tr>
+  <td id="td1"><div id="date1"></div> </td>
+  <td id="spacer"> </td>
+  <td id="td2"><div id="date2"></div> </td>
+</tr>
+</table>
+<div id="date3"></div>
 
+<div id="block2"></div>
+
+<div id="social"><a href="https://www.facebook.com/BHScProcrastinator/">
+<img border="0" alt="FaceBook Link" src="fb.png" width="70%">
+</a></div>
 
 </body>
 
