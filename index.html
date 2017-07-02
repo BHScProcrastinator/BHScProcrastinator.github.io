@@ -1,106 +1,80 @@
 <html>
+
 <head>
-<title>The Procrastinator</title>
-<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
-<html lang="en-US">
-<head profile="http://www.w3.org/2005/10/profile">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="theme-color" content="#ffffff">
 
-<script type="text/javascript">
-function startTime()
-{
-var today=new Date();
-var h=today.getHours()+8;
-var m=today.getMinutes();
-var s=today.getSeconds();
+  <title>The Procrastinator</title>
+  <html lang="en-US">
+  <head profile="http://www.w3.org/2005/10/profile">
 
-var d=today.getDate();
-var mo=today.getMonth()+1;
-var y=today.getFullYear();
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
 
-var dict={1:"January",2:"February",3:"March",4:"April",5:"May",6:"June",7:"July",8:"August",9:"September",10:"October",11:"November",12:"December"};
-var dict2={1:31,2:28,3:31,4:30,5:31,6:30,7:31,8:31,9:30,10:31,11:30,12:31};
+  <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles.css">
 
-if (h>23) {h=h-24; d++}
-if (d>dict2[mo]) {d=d-dict2[mo]; mo++}
-if (mo>12) {mo=mo-12; y++}
-
-var ap = "AM"
-
-if (h>11) {ap="PM"}
-if (h>12) {h=h-12}
-if (h==0) {h=12}
-
-
-// add a zero in front of numbers<10
-m=checkTime(m);
-s=checkTime(s);
-document.getElementById('date1').innerHTML=h+":"+m+":"+s;
-document.getElementById('date2').innerHTML=ap;
-document.getElementById('date3').innerHTML=dict[mo]+" "+d+", "+y;
-t=setTimeout('startTime()',500);
-}
-function checkTime(i)
-{
-if (i<10)
-{
-i="0" + i;
-}
-return i;
-}
-</script>
-
-
-<style>
-body {background-color: white; text-align: center; font-family: 'Merriweather', serif; color: black}
-table {margin-left: auto; margin-right: auto}
-#social {text-align: left; position:fixed;  bottom:10;}
-#td1 {width: 20em}
-#td2 {width: 10em}
-#spacer {width: 1em}
-#block {height:30%}
-#block2 {height:8em}
-
-#text1 {font-size: 30pt}
-#text2 {font-size: 18pt}
-#date1 {font-size: 60pt; text-align: right}
-#date2 {font-size: 60pt; text-align: left}
-#date3 {font-size: 20pt}
-
-
-</style>
+  <script src="init.js"></script>
 
 </head>
 
-
 <body onload="startTime()">
 
-<div id="block"></div>
-<div id="text1"> We're busy procrastinating! </div>
-<br><br>
-<div id="text2"> The Procrastinator website will launch at: </div>
-<table>
-<tr>
-  <td id="td1"><div id="date1"></div> </td>
-  <td id="spacer"> </td>
-  <td id="td2"><div id="date2"></div> </td>
-</tr>
-</table>
-<div id="date3"></div>
+<section id="main">
+  <div id="block"></div>
+  <div id="text1"> We're busy procrastinating!</div>
+  <br><br>
+  <div id="text2"> The Procrastinator website will launch at: </div>
 
-<div id="block2"></div>
-<div><a href="issue1.pdf">Issue 1</a> &emsp; <a href="issue2.pdf">Issue 2</a></div>
+  <table>
+    <tr>
+      <td id="td1"><div id="date1"></div> </td>
+      <td id="spacer"> </td>
+      <td id="td2"><div id="date2"></div> </td>
+    </tr>
+  </table>
 
-<div id="social"><a href="https://www.facebook.com/BHScProcrastinator/">
+  <div id="date3"></div>
 
-<img border="0" alt="FaceBook Link" src="fb.png" width="70%">
-</a></div>
+</section>
+
+
+<section id="links">
+  <div id="block2"></div>
+
+  <div>
+    <a id="aboutButton">the what now?</a> &emsp;
+    <a href="issue1.pdf">Issue 1</a> &emsp;
+    <a href="issue2.pdf">Issue 2</a>
+  </div>
+
+</section>
+
+<section id="social">
+    <a href="https://www.facebook.com/BHScProcrastinator/">
+      <img border="0" alt="FaceBook Link" src="fb.png" width="70%">
+    </a>
+</section>
+
+<section id="about">
+  <div id="about2">The &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</div>
+  <div id="about3">Procrastinator.</div>
+
+  <div id="about4">
+    <p>We are a satire magazine, run by students from McMaster University's most prestigious ornithology program - BHSc. </p>
+    <br>
+    <p>{DESCRIPTION GOES HERE}</p>
+
+  </div>
+
+</section>
+
+
+<script src="about.js"></script>
 
 </body>
+
 
 </html>
