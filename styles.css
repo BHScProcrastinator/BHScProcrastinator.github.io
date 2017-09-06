@@ -1,7 +1,8 @@
 * {-webkit-backface-visibility: hidden;
   -webkit-transform: translate3d(0, 0, 0);
   transition: all 0.4s linear;}
-body {background-color: white; text-align: center; font-family: 'Merriweather', serif; color: black}
+html {height:100%}
+body {background-color: white; text-align: center; font-family: 'Merriweather', serif; color: black; height: 98%;}
 table {margin-left: auto; margin-right: auto}
 section {
   -webkit-transition-delay: 0.25s; transition-delay: 0.25s;
@@ -9,9 +10,10 @@ section {
     transition-timing-function: ease;
     position: relative; top: 0%}
 
+
 #about {visibility:hidden; opacity: 0; -webkit-transition-delay: 0s; transition-delay: 0s;}
 .aboutActive, .blogActive {-webkit-transition-delay: 0s; transition-delay: 0s;}
-.blogActive{top:-80%; opacity: 0}
+.blogActive{top:calc(-22em - 30%); opacity: 0}
 
 #main.aboutActive {
   -webkit-filter: blur(5px);
@@ -33,9 +35,13 @@ section {
    -webkit-transition-delay: 0.25s; transition-delay: 0.25s;
 }
 
-#social.blogActive, #links.blogActive {opacity: 1}
+#blog {text-align: center; width: 100%; position:fixed; top:auto; bottom: -60em;}
+#blogtext {position: relative; width: 80%; margin-left: auto; margin-right: auto;}
+
+#social.blogActive, #links.blogActive, #blog.blogActive {opacity: 1}
 #main.blogActive {top:-78%}
 #about.blogActive{top: -25em}
+#blog.blogActive{bottom: 50%}
 
 #td1 {width: 20em}
 #td2 {width: 10em}
@@ -49,7 +55,8 @@ section {
 #date2 {font-size: 60pt; text-align: left}
 #date3 {font-size: 20pt}
 
-#social {text-align: left; position:fixed; top: auto; bottom:10;}
+#social {text-align: left; position:absolute; top:auto; bottom: 1%;}
+#facebook {width: 50px}
 
 #about {width: 90%; height: 60%; text-align: center; position: absolute; top: 3em; left:0; right:0; margin: auto;}
 #about2 {font-size: 18pt; margin: auto; position: relative; top: 2em;}

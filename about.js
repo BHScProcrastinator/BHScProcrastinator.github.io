@@ -34,6 +34,7 @@ function blogToggle() {
   var containers = document.getElementsByTagName("section");
   if (hasClass(containers[0],"blogActive") == false) {
     buttonsReset();
+    $('html, body').animate({ scrollTop: 0 }, 'fast');
     for (i = 0; i < containers.length; i++) {containers[i].setAttribute("class", "blogActive")};
     document.getElementById("blogButton").setAttribute("class", "waiting");
     setTimeout (function () {

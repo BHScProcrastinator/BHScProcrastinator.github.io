@@ -1,10 +1,10 @@
+<!DOCTYPE html>
+
 <html>
-<head>
+<head profile="http://www.w3.org/2005/10/profile">
   <meta charset="utf-8">
   <title>The Procrastinator</title>
   <html lang="en-US">
-  <head profile="http://www.w3.org/2005/10/profile">
-
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
@@ -15,14 +15,15 @@
   <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="styles.css">
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="init.js"></script>
 
 </head>
 
 <body onload="startTime()">
+<div id="block"></div>
 
 <section id="main">
-  <div id="block"></div>
   <div id="text1"> We're busy procrastinating!</div>
   <br><br>
   <div id="text2"> The Procrastinator website will launch at: </div>
@@ -53,7 +54,7 @@
 
 <section id="social">
     <a href="https://www.facebook.com/BHScProcrastinator/">
-      <img border="0" alt="FaceBook Link" src="fb.png" width="70%">
+      <img id="facebook" border="0" alt="FaceBook Link" src="fb.png">
     </a>
 </section>
 
@@ -64,11 +65,19 @@
   <div id="about4">
     <p>We are a satire magazine, run by students from McMaster University's most prestigious ornithology program - BHSc. </p>
     <br>
-    <p>{DESCRIPTION GOES HERE}</p>
+    <p>Something is supposed to go here. I wonder what it could be.</p>
 
   </div>
+</section>
+
+<section id="blog">
+  <div id="blogtext">
+  <p id="text2"> This is a blog. </p>
+  <p> There is nothing here. How typical. </p>
+</div>
 
 </section>
+
 
 <script src="blog.js"></script>
 <script src="about.js"></script>
